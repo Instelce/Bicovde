@@ -17,20 +17,23 @@
         <div class="topbar">
             <a href="index.html"><h1>Binary Converter</h1></a>
         </div>
+    
+        <div class="conversion__container">
+            <!-- Container base 10 to base 2 converter -->
+            <div class="side side__right">
+                <h3>Decimal to Binary</h3>
 
-        <header>
-            <p>If you want to convert from binary to decimal and vice versa, you are on the right application !</p>
-            <a class="open__modalbox btn__orange"><span>Start Conversion</span></a>
-        </header>
-    </div>
+                <form class="convertion__form">
+                    <input id="10t2" class="mb-10" type="text" placeholder="127">
+                    <button class="btn__blue" type="button"><span>Conversion</span></button>
+                </form>
 
-    <div class="modalbox__container">
-        <div class="modalbox">
-            <h4>Conversion choice</h4>
-            <img class="modalbox__close" src="images/close.svg">
-            <div>
-                <a href="convertion_2t10.html" class="btn__orange"><span>Binary to decimal</span></a>
-                <a href="convertion_10t2.html" class="btn__orange"><span>Decimal to Binary</span></a>
+                <div class="result__container">
+                    <div class="result">
+                        <span>Result</span>
+                        <span>None</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -40,6 +43,6 @@
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script src="js/particles.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/convertions.js"></script>
 </body>
 </html>

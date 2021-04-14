@@ -1,6 +1,3 @@
-// For Swup
-// const swup = new Swup();
-
 // For modalbox
 const openModalboxButton = document.querySelector('.open__modalbox')
 const closeModalboxButton = document.querySelector('.modalbox__close')

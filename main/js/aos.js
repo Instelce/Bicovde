@@ -1,0 +1,2 @@
+// For AOS
+AOS.init();

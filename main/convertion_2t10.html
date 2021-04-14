@@ -7,6 +7,7 @@
     <title>Binary Converter</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,24 +16,24 @@
 <body>
     <div class="container">
         <div class="topbar">
-            <a href="index.html"><h1>Binary Converter</h1></a>
+            <a href="index.html" data-aos="fade-down" data-aos-delay="100"><img src="images/logo.png"></a>
+            <h3 data-aos="fade-down">A super converter</h3>
         </div>
     
         <div class="conversion__container">
             <!-- Container base 2 to base 10 converter -->
-            <div class="side side__left">
+            <div class="side side__left" data-aos="fade-up">
                 <h3>Binary to Decimal</h3>
 
                 <form class="convertion__form">
-                    <label class="mb-10">For the conversion, a space must be put between the 0 and 1.</label>
-                    <input id="2t10" class="mb-10" type="text" placeholder="0 0 0 0 0 0 0 1">
-                    <button onclick="converterBinaryToDecimal()" class="btn__blue" type="button"><span>Conversion</span></button>
+                    <input id="2t10" class="mb-10" type="number" placeholder="00000001">
+                    <button class="btn__blue" onclick="binaryToDecimal()" type="button"><span>Conversion</span></button>
                 </form>
 
                 <div class="result__container">
                     <div class="result">
                         <span>Result</span>
-                        <span>None</span>
+                        <span id="result">None</span>
                     </div>
                 </div>
             </div>
@@ -42,8 +43,9 @@
     <div id="particles" class="particles"></div>
     
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="js/particles.js"></script>
     <script src="js/convertions.js"></script>
+    <script src="js/aos.js"></script>
 </body>
 </html>

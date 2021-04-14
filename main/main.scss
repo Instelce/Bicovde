@@ -49,7 +49,7 @@ form {
     flex-direction: column;
 }
 
-input[type="text"] {
+input[type="number"] {
     width: 100%;
     padding: 10px 24px;
 
@@ -67,6 +67,10 @@ input[type="text"] {
 
     transition: background 0.3s, border 0.3s;
 
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
     &:hover {
         background: $color-dark-blue;
     }
@@ -178,26 +182,30 @@ input[type="text"] {
 
 .topbar {
     width: 100%;
-    height: 20vh;
+    height: 25vh;
 
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    flex-direction: column;
 
-.topbar h1 {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+    img {
+        width: 120px;
+    }
 
+    h3 {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
 
 // Index Page 
 header {
     width: 100%;
-    height: 80vh;
+    height: 75vh;
 
     position: relative;
 
@@ -297,7 +305,7 @@ header {
 
 // Convertion page
 .conversion__container {
-    height: 80vh;
+    height: 75vh;
     padding: 10px 12% 40px 12%;
 
     display: flex;

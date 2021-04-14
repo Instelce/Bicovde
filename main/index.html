@@ -7,6 +7,7 @@
     <title>Binary Converter</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,10 +16,11 @@
 <body>
     <div class="container">
         <div class="topbar">
-            <a href="index.html"><h1>Binary Converter</h1></a>
+            <a href="index.html" data-aos="fade-down" data-aos-delay="100"><img src="images/logo.png"></a>
+            <h3 data-aos="fade-down">A super converter</h3>
         </div>
 
-        <header>
+        <header data-aos="zoom-in-up">
             <p>If you want to convert from binary to decimal and vice versa, you are on the right application !</p>
             <a class="open__modalbox btn__orange"><span>Start Conversion</span></a>
         </header>
@@ -37,9 +39,10 @@
 
     <div id="particles" class="particles"></div>
     
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/aos.js"></script>
 </body>
 </html>

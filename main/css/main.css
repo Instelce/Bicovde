@@ -36,7 +36,7 @@ form {
   flex-direction: column;
 }
 
-input[type=text] {
+input[type=number] {
   width: 100%;
   padding: 10px 24px;
   -webkit-app-region: no-drag;
@@ -49,21 +49,24 @@ input[type=text] {
   border: 1px solid #22223B;
   transition: background 0.3s, border 0.3s;
 }
-input[type=text]:hover {
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number]:hover {
   background: #22223B;
 }
-input[type=text]:hover::placeholder {
+input[type=number]:hover::placeholder {
   color: #4A4E69;
 }
-input[type=text]::placeholder {
+input[type=number]::placeholder {
   color: #22223B;
   transition: color 0.3s;
 }
-input[type=text]:focus {
+input[type=number]:focus {
   background: #22223B;
   border: 1px solid #ee6c4d;
 }
-input[type=text]:focus::placeholder {
+input[type=number]:focus::placeholder {
   color: #4A4E69;
 }
 
@@ -139,22 +142,25 @@ input[type=text]:focus::placeholder {
 
 .topbar {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-
-.topbar h1 {
-  font-size: 32px;
+.topbar img {
+  width: 120px;
+}
+.topbar h3 {
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 header {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -232,7 +238,7 @@ header p {
 }
 
 .conversion__container {
-  height: 80vh;
+  height: 75vh;
   padding: 10px 12% 40px 12%;
   display: flex;
   align-items: center;

@@ -1,23 +1,104 @@
 {
-  "name": "Binary_App_Converter",
+  "name": "bicovde",
+  "productName": "Bicovde",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "win": "electron-builder --win",
+    "linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "Bicovde",
+    "files": [
+      "app/**/*",
+      "./build/**/*",
+      "./main.js"
+    ],
+    "copyright": "©2021 Instelce",
+    "mac": {
+      "target": [
+        "dmg",
+        "pkg",
+        "zip"
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "icon": "build/icon.icns",
+      "description": "Bicovde for Linux",
+      "target": [
+        "deb",
+        "zip",
+        "AppImage",
+        "snap"
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "deb": {
+      "synopsis": "Bicovde App"
+    },
+    "snap": {
+      "synopsis": "Bicovde App"
+    },
+    "dmg": {
+      "icon": "build/icon.icns",
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis-web",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "msi",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "${productName}-Web-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "perMachine": false
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Instelce/Binary_App_Converter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Instelce",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Instelce/Binary_App_Converter/issues"
+    "url": "https://github.com/Instelce/Binary_App_Converter/issues",
+    "email": "intelce.developpement@gmail.com"
   },
   "homepage": "https://github.com/Instelce/Binary_App_Converter#readme",
   "devDependencies": {
-    "electron": "^12.0.2"
+    "electron": "^12.0.5",
+    "electron-builder": "^22.10.5"
   }
 }
